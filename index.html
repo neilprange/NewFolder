@@ -7,12 +7,20 @@
 
 <body align = "center">
 
-    <h1>Neil Prange</h1>
+    <h1>Blackjack Helper!</h1>
 
-    <button onclick="alertButton()">Hello</button>
+    <label for="First">First Card:</label>
+    <input type="text" id="First" placeholder="Enter your first card">
 
-    <label for="First">FirstCard:</label>
-    <input type="text" firstCard="First" name="First">
+    <label for="Second">Second Card:</label>
+    <input type="text" id="Second" placeholder="Enter your second card">
+
+    <label for="Third">Dealer Card:</label>
+    <input type="text" id="Third" placeholder="Enter the dealer's card">
+
+    <button onclick="alertHitOrStand(document.getElementById('First'), document.getElementById('Second'), document.getElementById('Third'))">Calculate</button>
+
+
 
 
 </body>
