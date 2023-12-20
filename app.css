@@ -1,7 +1,8 @@
 h1 {
-    color: blue;
+    color: black;
 }
 
 body {
+    background-image: url("background.jpg");
     background-color: white;
 }
