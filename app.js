@@ -1,5 +1,11 @@
+document.getElementById("Calculate").addEventListener("click", callHitOrStand);
+
+function callHitOrStand() {
+    alert(hitOrStand(document.getElementById("First").value, document.getElementById("Second").value, document.getElementById("Third").value));
+}
+
 // Function to determine if user should hit, stand, double, or split
-// @Param firstCard, secondCard, dealerCard
+// @Param firstCard, secondCard, dealerCard 
 // @Return "Hit", "Stand", "Double", "Split"
 function hitOrStand(firstCard, secondCard, dealerCard) {
 
@@ -13,7 +19,7 @@ function hitOrStand(firstCard, secondCard, dealerCard) {
     if((dealerCard === "J") || (dealerCard == "Q") || (dealerCard == "K")) {
         dealerCard = 10
     }
-    let playerHand = firstCard + secondCard
+    let playerHand = +firstCard + +secondCard;
 
     if((firstCard == 10) && (secondCard == 10)) {
         return "stand"
@@ -135,10 +141,11 @@ function hitOrStand(firstCard, secondCard, dealerCard) {
         }
         return "hit"
     }
-    return "Fail"
+    //Player hand is 17+
+    else if(playerHand >= 17) {
+        return "stand"
+    }
+    return "hit"
 }
 
-function alertHitOrStand(firstCard, secondCard, dealerCard) {
-    alert(firstCard)
-}
 
