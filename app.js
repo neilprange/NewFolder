@@ -1,7 +1,8 @@
 document.getElementById("Calculate").addEventListener("click", callHitOrStand);
+const out = document.getElementById('output');
 
 function callHitOrStand() {
-    alert(hitOrStand(document.getElementById("First").value, document.getElementById("Second").value, document.getElementById("Third").value));
+    out.innerHTML = hitOrStand(document.getElementById("First").value, document.getElementById("Second").value, document.getElementById("Third").value);
 }
 
 // Function to determine if user should hit, stand, double, or split
@@ -147,5 +148,6 @@ function hitOrStand(firstCard, secondCard, dealerCard) {
     }
     return "hit"
 }
+
 
 
